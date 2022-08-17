@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<head>
+    <meta charset="utf-8">
+    <title>TCTW Demo</title>
+    <link href="css.css" rel="stylesheet">
+</head>
+
+<body>
+<H1> DEMO測試網站 </H1>
+
+
+<!-- Load Social Gear SDK for JavaScript -->
+<script>
+  window.sgAsyncInit = function() {
+    SG.init({
+      channelId: "wkzbOQKbO0wuYKCIsuxQ"      
+    });
+    
+    SG.addListenerOnce("state_changed", function(state) {
+      if (state === "connected") {
+      // Do something: request_agent, send_user_data, run_scenario
+      }
+    });
+  };
+
+  (function(d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+      return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://chatbox.c-plus.cloud/plugin/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, "script", "sg-jssdk");
+</script>
+
+
+  </body>
+</html>
